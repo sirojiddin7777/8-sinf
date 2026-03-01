@@ -40,4 +40,22 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   .catch(error => {
     alert("Xatolik yuz berdi!");
   });
+
 });
+function openLightbox(src) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = src;
+  document.getElementById("lightbox-img").style.display = "block";
+  document.getElementById("lightbox-video").style.display = "none";
+}
+
+function openVideo(src) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-video").src = src;
+  document.getElementById("lightbox-video").style.display = "block";
+  document.getElementById("lightbox-img").style.display = "none";
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
