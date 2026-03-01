@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-sinf Galereya</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#111;
+  color:white;
+  text-align:center;
+}
+
+h1{
+  padding:20px;
+}
+
+.gallery{
+  padding:20px;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+
+.item{
+  overflow:hidden;
+  border-radius:15px;
+  cursor:pointer;
+}
+
+.item img,
+.item video{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  filter:blur(4px);
+  transition:0.4s;
+}
+
+.item:hover img,
+.item:hover video{
+  filter:blur(0);
+  transform:scale(1.05);
+}
+
+/* Lightbox */
+#lightbox{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+
+#lightbox img,
+#lightbox video{
+  max-width:85%;
+  max-height:85%;
+  border-radius:15px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>📸 8-sinf Galereya</h1>
+
+<section class="gallery">
+  <div class="gallery-grid">
+
+    <!-- 15 ta rasm (nomlarini o‘zgartirasiz) -->
+    <div class="item"><img src="1.png" onclick="openImage(this.src)"></div>
+    <div class="item"><img src="2.png" onclick="openImage(this.src)"></div>
+    <div class="item"><img src="3.png" onclick="openImage(this.src)"></div>
+    <div class="item"><img src="4.png" onclick="openImage(this.src)"></div>
+    <div class="item"><img src="5.png" onclick="openImage(this.src)"></div>
+
+    <!-- 4 ta video -->
+    <div class="item"><video src="1.mp4" onclick="openVideo(this.src)"></video></div>
+    <div class="item"><video src="2.mp4" onclick="openVideo(this.src)"></video></div>
+
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+  <video id="lightbox-video" controls></video>
+</div>
+
+<script>
+function openImage(src){
+  document.getElementById("lightbox").style.display="flex";
+  document.getElementById("lightbox-img").src=src;
+  document.getElementById("lightbox-img").style.display="block";
+  document.getElementById("lightbox-video").style.display="none";
+}
+
+function openVideo(src){
+  document.getElementById("lightbox").style.display="flex";
+  document.getElementById("lightbox-video").src=src;
+  document.getElementById("lightbox-video").style.display="block";
+  document.getElementById("lightbox-img").style.display="none";
+}
+
+function closeLightbox(){
+  document.getElementById("lightbox").style.display="none";
+}
+</script>
+
+</body>
+</html>
