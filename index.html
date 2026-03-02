@@ -400,9 +400,21 @@
 </section>
 <!-- JS ulash -->
 <script src="script.js"></script>
+<script>
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    let password = prompt("Rasmni yuklab olish uchun kod kiriting:");
 
+    if (password === "7777") {
+        alert("Ruxsat berildi ✅");
+    } else {
+        alert("Noto‘g‘ri kod ❌");
+    }
+});
+</script>
 </body>
 </html>
+
 
 
 
