@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-sinf Yangiliklar</title>
+
+<style>
+
+/* ===== ULTRA 4K ANIMATED BACKGROUND ===== */
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#000000);
+  background-size:400% 400%;
+  animation:bgMove 12s ease infinite;
+  color:white;
+}
+
+@keyframes bgMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* ===== HEADER ===== */
+header{
+  text-align:center;
+  padding:70px 20px 30px;
+}
+
+header h1{
+  font-size:50px;
+  letter-spacing:2px;
+  background:linear-gradient(45deg,#00f0ff,#ff00c8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ===== GRID ===== */
+.news-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
+  padding:60px;
+}
+
+/* ===== PREMIUM CARD ===== */
+.news-card{
+  position:relative;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(20px);
+  border-radius:30px;
+  overflow:hidden;
+  transition:0.5s;
+  box-shadow:0 0 25px rgba(0,255,255,0.2);
+}
+
+/* ANIMATED GLOW BORDER */
+.news-card::before{
+  content:"";
+  position:absolute;
+  inset:-3px;
+  border-radius:30px;
+  background:linear-gradient(45deg,#00f0ff,#ff00c8,#00ff6a,#ffcc00,#00f0ff);
+  background-size:400%;
+  z-index:-1;
+  animation:borderGlow 6s linear infinite;
+}
+
+@keyframes borderGlow{
+  0%{background-position:0%;}
+  100%{background-position:400%;}
+}
+
+.news-card:hover{
+  transform:translateY(-15px) scale(1.05);
+  box-shadow:0 0 50px rgba(0,255,255,0.7);
+}
+
+.news-card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+
+.news-content{
+  padding:25px;
+}
+
+.news-content h3{
+  margin:0 0 12px;
+  font-size:22px;
+}
+
+.news-content p{
+  color:#ccc;
+  font-size:14px;
+}
+
+.date{
+  font-size:12px;
+  margin-top:12px;
+  color:#aaa;
+}
+
+/* ===== BACK BUTTON ===== */
+.back{
+  display:inline-block;
+  margin:60px auto;
+  padding:15px 45px;
+  background:linear-gradient(45deg,#ff416c,#ff4b2b);
+  color:white;
+  text-decoration:none;
+  border-radius:50px;
+  font-weight:bold;
+  transition:0.4s;
+}
+
+.back:hover{
+  transform:scale(1.1);
+}
+
+/* ===== SIGNATURE SECTION ===== */
+.creator{
+  text-align:center;
+  margin:120px 0 50px;
+  font-size:48px;
+  font-family:cursive;
+  font-weight:bold;
+  letter-spacing:3px;
+}
+
+.creator span{
+  display:inline-block;
+  transition:0.4s;
+  cursor:pointer;
+}
+
+/* Harfma-harf hover animatsiya */
+.creator span:hover{
+  transform:translateY(-18px) scale(1.3);
+  animation:colorShift 1s infinite alternate;
+}
+
+/* Neon rang almashinuvi */
+@keyframes colorShift{
+  0%{ color:#ff0080; text-shadow:0 0 10px #ff0080; }
+  25%{ color:#00f0ff; text-shadow:0 0 15px #00f0ff; }
+  50%{ color:#00ff6a; text-shadow:0 0 20px #00ff6a; }
+  75%{ color:#ffcc00; text-shadow:0 0 20px #ffcc00; }
+  100%{ color:#ff3c00; text-shadow:0 0 25px #ff3c00; }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>📰 8-sinf Yangiliklar</h1>
+</header>
+
+<div class="news-grid">
+
+  <div class="news-card">
+    <img src="1.png">
+    <div class="news-content">
+      <h3>Sinfimiz Sport Musobaqasida G‘olib</h3>
+      <p>8-sinf o‘quvchilari maktab sport musobaqasida 1-o‘rinni qo‘lga kiritdi.</p>
+      <div class="date">📅 3-Mart, 2026</div>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <img src="2.png">
+    <div class="news-content">
+      <h3>Matematika Olimpiadasi</h3>
+      <p>Tuman bosqichida faol ishtirok etildi.</p>
+      <div class="date">📅 1-Mart, 2026</div>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <img src="3.png">
+    <div class="news-content">
+      <h3>IT Loyihalar Boshlanmoqda</h3>
+      <p>Yangi texnologik loyihalar ishga tushirilmoqda.</p>
+      <div class="date">📅 28-Fevral, 2026</div>
+    </div>
+  </div>
+
+</div>
+
+<center>
+  <a href="index.html" class="back">⬅ Bosh sahifaga qaytish</a>
+</center>
+
+<!-- CREATED BY SIGNATURE -->
+<div class="creator">
+  <span>C</span>
+  <span>R</span>
+  <span>E</span>
+  <span>A</span>
+  <span>T</span>
+  <span>E</span>
+  <span>D</span>
+  <span>&nbsp;</span>
+  <span>B</span>
+  <span>Y</span>
+  <span>&nbsp;</span>
+  <span>S</span>
+  <span>I</span>
+  <span>R</span>
+  <span>O</span>
+  <span>J</span>
+  <span>I</span>
+  <span>D</span>
+  <span>D</span>
+  <span>I</span>
+  <span>N</span>
+</div>
+
+</body>
+</html>
