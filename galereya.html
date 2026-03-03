@@ -188,6 +188,37 @@ function closeLightbox(){
   document.getElementById("lightbox").style.display="none";
 }
 </script>
+<script>
+// PAROL
+const secretCode = "8888"; // shu yerga o'zingiz istagan kodni yozing
 
+// O'ng klik bloklash
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+    let userCode = prompt("🔒 Yuklab olish uchun maxsus kodni kiriting:");
+    if(userCode !== secretCode){
+        alert("❌ Noto‘g‘ri kod!");
+    } else {
+        alert("✅ Ruxsat berildi");
+    }
+});
+
+// Telefon uchun uzoq bosishni bloklash
+document.addEventListener("touchstart", function(e){
+    this.touchTimer = setTimeout(()=>{
+        let userCode = prompt("🔒 Yuklab olish uchun maxsus kodni kiriting:");
+        if(userCode !== secretCode){
+            alert("❌ Noto‘g‘ri kod!");
+        } else {
+            alert("✅ Ruxsat berildi");
+        }
+    }, 700);
+});
+
+document.addEventListener("touchend", function(){
+    clearTimeout(this.touchTimer);
+});
+</script>
 </body>
 </html>
+
