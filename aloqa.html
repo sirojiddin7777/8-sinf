@@ -1,15 +1,79 @@
-<div style="text-align:center; margin-top:20px;">
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+  font-family: Arial, sans-serif;
+}
+
+.contact-box{
+  text-align:center;
+  padding:50px;
+  border-radius:30px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 40px rgba(0,255,255,0.3);
+  animation: glowBox 3s infinite alternate;
+}
+
+@keyframes glowBox{
+  from{
+    box-shadow: 0 0 40px rgba(0,255,255,0.3);
+  }
+  to{
+    box-shadow: 0 0 80px rgba(0,255,255,0.8);
+  }
+}
+
+.contact-box h3{
+  color:white;
+  font-size:28px;
+  margin-bottom:40px;
+  text-shadow: 0 0 15px rgba(0,255,255,0.8);
+  letter-spacing:2px;
+}
+
+.btn{
+  display:inline-block;
+  padding:18px 50px;
+  margin:15px;
+  font-size:18px;
+  font-weight:bold;
+  text-decoration:none;
+  color:white;
+  border-radius:60px;
+  transition:0.4s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.telegram{
+  background: linear-gradient(45deg,#00c6ff,#0072ff);
+  box-shadow:0 0 25px #00c6ff;
+}
+
+.back{
+  background: linear-gradient(45deg,#ff416c,#ff4b2b);
+  box-shadow:0 0 25px #ff416c;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 50px white;
+}
+</style>
+
+<div class="contact-box">
   <h3>📩 Takliflar va murojaatlar uchun:</h3>
-  <a href="https://t.me/fayzirahmonov" target="_blank" 
-     style="display:inline-block;
-            padding:12px 25px;
-            background:#0088cc;
-            color:white;
-            text-decoration:none;
-            border-radius:10px;
-            font-weight:bold;">
-    Telegramga yozish
+
+  <a href="https://t.me/fayzirahmonov" target="_blank" class="btn telegram">
+    🚀 Telegramga yozish
   </a>
 
-  <a href="index.html" class="back">⬅ Orqaga qaytish</a>
+  <a href="index.html" class="btn back">
+    ⬅ Orqaga qaytish
+  </a>
 </div>
