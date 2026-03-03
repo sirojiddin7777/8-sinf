@@ -37,31 +37,31 @@ header h1{
   -webkit-text-fill-color:transparent;
 }
 
-/* ===== GRID ===== */
-.news-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:40px;
-  padding:60px;
+/* ===== BIG VIDEO CARD ===== */
+.video-wrapper{
+  display:flex;
+  justify-content:center;
+  padding:60px 20px;
 }
 
-/* ===== PREMIUM CARD ===== */
-.news-card{
+.video-card{
   position:relative;
+  width:85%;
+  max-width:1200px;
+  border-radius:35px;
+  overflow:hidden;
   background:rgba(255,255,255,0.06);
   backdrop-filter:blur(20px);
-  border-radius:30px;
-  overflow:hidden;
+  box-shadow:0 0 40px rgba(0,255,255,0.3);
   transition:0.5s;
-  box-shadow:0 0 25px rgba(0,255,255,0.2);
 }
 
-/* ANIMATED GLOW BORDER */
-.news-card::before{
+/* Glow border */
+.video-card::before{
   content:"";
   position:absolute;
   inset:-3px;
-  border-radius:30px;
+  border-radius:35px;
   background:linear-gradient(45deg,#00f0ff,#ff00c8,#00ff6a,#ffcc00,#00f0ff);
   background-size:400%;
   z-index:-1;
@@ -73,35 +73,15 @@ header h1{
   100%{background-position:400%;}
 }
 
-.news-card:hover{
-  transform:translateY(-15px) scale(1.05);
-  box-shadow:0 0 50px rgba(0,255,255,0.7);
+.video-card:hover{
+  transform:scale(1.03);
+  box-shadow:0 0 70px rgba(0,255,255,0.8);
 }
 
-.news-card img{
+.video-card video{
   width:100%;
-  height:230px;
-  object-fit:cover;
-}
-
-.news-content{
-  padding:25px;
-}
-
-.news-content h3{
-  margin:0 0 12px;
-  font-size:22px;
-}
-
-.news-content p{
-  color:#ccc;
-  font-size:14px;
-}
-
-.date{
-  font-size:12px;
-  margin-top:12px;
-  color:#aaa;
+  height:auto;
+  display:block;
 }
 
 /* ===== BACK BUTTON ===== */
@@ -121,7 +101,7 @@ header h1{
   transform:scale(1.1);
 }
 
-/* ===== SIGNATURE SECTION ===== */
+/* ===== SIGNATURE ===== */
 .creator{
   text-align:center;
   margin:120px 0 50px;
@@ -137,13 +117,11 @@ header h1{
   cursor:pointer;
 }
 
-/* Harfma-harf hover animatsiya */
 .creator span:hover{
   transform:translateY(-18px) scale(1.3);
   animation:colorShift 1s infinite alternate;
 }
 
-/* Neon rang almashinuvi */
 @keyframes colorShift{
   0%{ color:#ff0080; text-shadow:0 0 10px #ff0080; }
   25%{ color:#00f0ff; text-shadow:0 0 15px #00f0ff; }
@@ -161,69 +139,23 @@ header h1{
   <h1>📰 8-sinf Yangiliklar</h1>
 </header>
 
-<div class="news-grid">
-
-  <div class="news-card">
-    <video src="uzbek.mp4.mp4">
-    <div class="news-content">
-      <h3>Sinfimiz Sport Musobaqasida G‘olib</h3>
-      <p>8-sinf o‘quvchilari maktab sport musobaqasida 1-o‘rinni qo‘lga kiritdi.</p>
-      <div class="date">📅 3-Mart, 2026</div>
-    </div>
+<div class="video-wrapper">
+  <div class="video-card">
+    <video src="uzbek.mp4.mp4" controls autoplay muted loop></video>
   </div>
-
-  <div class="news-card">
-    <video src="uzbek.mp4.mp4">
-    <div class="news-content">
-      <h3>Matematika Olimpiadasi</h3>
-      <p>Tuman bosqichida faol ishtirok etildi.</p>
-      <div class="date">📅 1-Mart, 2026</div>
-    </div>
-  </div>
-
-  <div class="news-card">
-    <video src="uzbek.mp4.mp4">
-    <div class="news-content">
-      <h3>IT Loyihalar Boshlanmoqda</h3>
-      <p>Yangi texnologik loyihalar ishga tushirilmoqda.</p>
-      <div class="date">📅 28-Fevral, 2026</div>
-    </div>
-  </div>
-
 </div>
 
 <center>
   <a href="index.html" class="back">⬅ Bosh sahifaga qaytish</a>
 </center>
 
-<!-- CREATED BY SIGNATURE -->
 <div class="creator">
-  <span>C</span>
-  <span>R</span>
-  <span>E</span>
-  <span>A</span>
-  <span>T</span>
-  <span>E</span>
-  <span>D</span>
+  <span>C</span><span>R</span><span>E</span><span>A</span><span>T</span><span>E</span><span>D</span>
   <span>&nbsp;</span>
-  <span>B</span>
-  <span>Y</span>
+  <span>B</span><span>Y</span>
   <span>&nbsp;</span>
-  <span>S</span>
-  <span>I</span>
-  <span>R</span>
-  <span>O</span>
-  <span>J</span>
-  <span>I</span>
-  <span>D</span>
-  <span>D</span>
-  <span>I</span>
-  <span>N</span>
+  <span>S</span><span>I</span><span>R</span><span>O</span><span>J</span><span>I</span><span>D</span><span>D</span><span>I</span><span>N</span>
 </div>
 
 </body>
 </html>
-
-
-
-
