@@ -131,7 +131,19 @@ document.addEventListener("contextmenu", function(e) {
     }
 });
 </script>
+  <script>
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener('touchstart', function(e) {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+}, { passive: false });
+</script>
 </body>
 </html>
+
 
 
