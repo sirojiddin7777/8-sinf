@@ -8,8 +8,9 @@
 <style>
 
 body{
+margin:0;
 font-family:Segoe UI;
-background:#0f2027;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 display:flex;
 justify-content:center;
 align-items:center;
@@ -17,25 +18,38 @@ height:100vh;
 color:white;
 }
 
-.form-box{
-background:#1f3a4a;
+.contact-box{
+background:rgba(255,255,255,0.08);
 padding:40px;
-border-radius:15px;
-width:320px;
+border-radius:20px;
+width:350px;
 text-align:center;
+box-shadow:0 0 25px rgba(0,255,255,0.4);
 }
 
-input{
+.contact-box h2{
+margin-bottom:20px;
+}
+
+input,textarea{
 width:100%;
-padding:10px;
+padding:12px;
 margin:10px 0;
 border:none;
 border-radius:8px;
+outline:none;
+font-size:14px;
+}
+
+textarea{
+height:100px;
+resize:none;
 }
 
 button{
 width:100%;
 padding:12px;
+margin-top:10px;
 background:#ff4b2b;
 border:none;
 border-radius:8px;
@@ -44,21 +58,40 @@ font-size:16px;
 cursor:pointer;
 }
 
+button:hover{
+background:#ff2a00;
+}
+
+.back{
+display:inline-block;
+margin-top:20px;
+color:white;
+text-decoration:none;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="form-box">
+<div class="contact-box">
 
 <h2>📞 Bog‘lanish</h2>
 
-<input type="text" id="name" placeholder="Ismingiz">
-<input type="text" id="phone" placeholder="Telefon raqamingiz">
+<input type="text" placeholder="Ismingiz">
 
-<button onclick="sendMessage()">Yuborish</button>
+<input type="text" placeholder="Telefon raqamingiz">
+
+<textarea placeholder="Xabaringizni yozing..."></textarea>
+
+<button>Yuborish</button>
+
+<a href="index.html" class="back">⬅ Bosh sahifaga qaytish</a>
 
 </div>
+
+</body>
+</html>
 
 <script>
 
