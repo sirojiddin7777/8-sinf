@@ -78,20 +78,17 @@ text-decoration:none;
 
 <h2>📞 Bog‘lanish</h2>
 
-<input type="text" placeholder="Ismingiz">
+<input type="text" id="name" placeholder="Ismingiz">
 
-<input type="text" placeholder="Telefon raqamingiz">
+<input type="text" id="phone" placeholder="Telefon raqamingiz">
 
-<textarea placeholder="Xabaringizni yozing..."></textarea>
+<textarea id="message" placeholder="Xabaringizni yozing..."></textarea>
 
-<button>Yuborish</button>
+<button onclick="sendMessage()">Yuborish</button>
 
 <a href="index.html" class="back">⬅ Bosh sahifaga qaytish</a>
 
 </div>
-
-</body>
-</html>
 
 <script>
 
@@ -99,11 +96,15 @@ function sendMessage(){
 
 let name=document.getElementById("name").value;
 let phone=document.getElementById("phone").value;
+let message=document.getElementById("message").value;
 
 let token="8467269941:AAEZGMWtAeISMElXZ457noguOwpi6ju8_qE";
 let chat_id="7960027462";
 
-let message=`Yangi aloqa:\nIsm: ${name}\nTelefon: ${phone}`;
+let text=`📩 Yangi xabar
+Ism: ${name}
+Telefon: ${phone}
+Xabar: ${message}`;
 
 fetch(`https://api.telegram.org/bot${token}/sendMessage`,{
 method:"POST",
@@ -112,7 +113,7 @@ headers:{
 },
 body:JSON.stringify({
 chat_id:chat_id,
-text:message
+text:text
 })
 })
 
