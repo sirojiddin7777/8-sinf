@@ -14,7 +14,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   const name = document.getElementById("name").value;
   const message = document.getElementById("message").value;
 
-  const token = "8467269941:AAE5iCW7kunNZ1kaJg3nv2lqmqALNnDEc4w";
+  const token = 8467269941:AAEZGMWtAeISMElXZ457noguOwpi6ju8_qE";
   const chat_id = "7960027462";
 
   const text = `
